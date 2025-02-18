@@ -16,7 +16,7 @@ jobs:
     - name: Run ZAP Baseline Scan
       run: |
         #docker exec zap zap-baseline.py -t http://localhost:8080 -r zap_report.html
-        docker run --rm softwaresecurityproject/zap-stable:2.14.0 zap-baseline.py -t http://localhost:8080 -r zap_report.html
+        docker run --rm softwaresecurityproject/zap-stable:2.14.0 zap-baseline.py -t http://localhost:8080
       continue-on-error: true
 
     - name: Upload ZAP Report
