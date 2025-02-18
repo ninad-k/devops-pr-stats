@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Start ZAP
-      run: docker run -u zap -p 8080:8080 -d owasp/zap2docker-stable zap.sh -daemon -port 8080 -host 0.0.0.0
+      run: docker run -u zap -p 8080:8080 -d softwaresecurityproject/zap-stable:2.14.0 zap-baseline.py -daemon -port 8080 -host 0.0.0.0
 
     - name: Wait for ZAP to start
       run: sleep 30
